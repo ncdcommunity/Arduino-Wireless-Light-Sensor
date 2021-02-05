@@ -31,7 +31,7 @@ void loop()
       {
   if(data[22]==0x0A)  //////// make sure the sensor type is correct
         {  
-          long int lux = ((data[24]<<8) + (data[25])) ;
+          long int lux = ((data[25]<<8) + (data[26])) ;
    float battery = ((data[18] * 256) + data[19]);
   float voltage = 0.00322 * battery;
   Serial.print("Sensor Number  ");
